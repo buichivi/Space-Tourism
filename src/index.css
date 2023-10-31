@@ -1,0 +1,921 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+:root {
+    --text-color-1: #0b0d17;
+    --text-color-2: #616476;
+    --text-color-3: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    color: var(--text-color-3);
+}
+
+h1 {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 136px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 96px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 52px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h5 {
+    color: #d0d6f9;
+    font-family: Barlow Condensed;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 4.725px;
+}
+
+p {
+    color: #fff;
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Content */
+.content {
+    width: 90%;
+    margin-left: auto;
+    padding-top: 140px;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* ========================== Background ========================== */
+.bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -999;
+}
+.home-bg {
+    background: url("./assets/home/background-home-desktop.jpg") no-repeat
+        center;
+    background-size: cover;
+}
+
+.destination-bg {
+    background: url("./assets/destination/background-destination-desktop.jpg")
+        no-repeat center;
+    background-size: cover;
+}
+
+.crew-bg {
+    background: url("./assets/crew/background-crew-desktop.jpg") no-repeat
+        center;
+    background-size: cover;
+}
+
+.technology-bg {
+    background: url("./assets/technology/background-technology-desktop.jpg")
+        no-repeat center;
+    background-size: cover;
+}
+
+/* ========================== Header ========================== */
+.header {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 100%;
+    /* height: 96px; */
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-icon {
+    display: none;
+}
+
+.navbar-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 
+        transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.5s ease;
+}
+
+.logo {
+    flex-basis: 10%;
+    width: 48px;
+    height: 48px;
+    padding-left: 32px;
+}
+
+.navbar {
+    flex-basis: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar__list {
+    width: 780px;
+    height: 100%;
+    list-style: none;
+    padding-left: 125px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    float: right;
+    position: relative;
+}
+
+.navbar__list::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -195%;
+    z-index: 2;
+    height: 1px;
+    width: 200%;
+    opacity: 0.2515;
+    background: #fff;
+}
+.navbar__item {
+    font-family: Barlow Condensed;
+    color: var(--text-color-3);
+    letter-spacing: 2.7px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.navbar__item.active {
+    border-bottom-color: var(--text-color-3) !important;
+}
+
+.navbar__item:hover {
+    border-bottom-color: #8a8b90;
+}
+
+.navbar__item > span {
+    font-weight: 700;
+    margin-right: 11px;
+}
+
+.navbar__item > a {
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--text-color-3);
+    padding: 35px 0;
+    cursor: pointer;
+}
+
+/* ========================== Home content ========================== */
+.home-content {
+    width: 90%;
+    padding-top: 32vh;
+    margin-left: auto;
+    display: flex;
+}
+
+.home-content__leftside {
+    width: 430px;
+}
+
+.home-content__leftside h3 {
+    font-size: 20px;
+    font-family: Barlow Condensed;
+    font-weight: 400;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    color: #d0d6f9;
+    margin-bottom: 24px;
+}
+
+.home-content__leftside h1 {
+    font-size: 128px;
+    font-weight: 400;
+    font-family: Bellefair;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.home-content__leftside p {
+    color: #d0d6f9;
+    font-family: Barlow;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.home-content__rightside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content__rightside a {
+    width: 200px;
+    height: 200px;
+    color: #0b0d17;
+    font-family: Bellefair;
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 200px;
+    background-color: var(--text-color-3);
+    border-radius: 50%;
+    position: relative;
+}
+
+.home-content__rightside a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    opacity: 0;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.home-content__rightside a:hover::before {
+    opacity: 0.1036;
+}
+
+/* ========================== Destination ========================== */
+.content__leftside,
+.content__rightside {
+    flex: 1;
+}
+
+.page-heading span {
+    color: #fff;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4.725px;
+    opacity: 0.25;
+    margin-right: 28px;
+}
+.page-heading {
+    color: #fff;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.content__leftside .planet-image img {
+    width: 60%;
+    aspect-ratio: 1;
+}
+
+.planet-image {
+    text-align: center;
+}
+
+.content__rightside {
+    padding-top: 50px;
+}
+
+.planet-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 35px;
+    margin-bottom: 28px;
+}
+
+.planet-name {
+    color: #fff;
+    font-family: Barlow Condensed;
+    letter-spacing: 2.7px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.planet-name:hover {
+    border-bottom-color: #ffffff80;
+}
+
+.planet-name.active {
+    border-bottom-color: #fff;
+}
+
+.planet-detail {
+    width: 445px;
+}
+
+.planet-detail h1 {
+    font-size: 100px;
+    margin-bottom: 14px;
+}
+
+.planet-detail p {
+    min-height: 157px;
+    color: #d0d6f9;
+    font-family: Barlow;
+    font-size: 16px;
+    line-height: 28px; /* 177.778% */
+    padding-bottom: 44px;
+    border-bottom: 1px solid var(--text-color-2);
+}
+
+.planet-detail > div {
+    padding-top: 18px;
+    display: flex;
+}
+
+.planet-detail > div > .planet-distance,
+.planet-detail > div > .planet-travel {
+    flex: 1;
+}
+
+.planet-detail > div > .planet-distance > span,
+.planet-detail > div > .planet-travel > span {
+    color: #d0d6f9;
+    font-family: Barlow Condensed;
+    font-size: 12px;
+    letter-spacing: 2.362px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.planet-detail > div > .planet-distance > h3,
+.planet-detail > div > .planet-travel > h3 {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+/* ========================== Crew ========================== */
+.crew-bg + .content .content__leftside,
+.crew-bg + .content .content__rightside {
+    flex: 1;
+}
+.crew-detail {
+}
+.crew-role {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.5042;
+    margin-bottom: 12px;
+}
+
+.crew-name {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 52px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.crew-bio {
+    width: 90%;
+    height: 100px;
+    color: #d0d6f9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px; /* 177.778% */
+    margin-bottom: 100px;
+}
+
+.crew-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 14px;
+}
+
+.crew-item-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--text-color-3);
+    opacity: 0.174363;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.crew-item-icon:hover {
+    opacity: 0.5;
+}
+.crew-item-icon.active {
+    background-color: var(--text-color-3);
+    opacity: 1;
+}
+
+.crew-bg + .content .content__rightside {
+    display: flex;
+    padding-top: 0;
+    justify-content: center;
+}
+
+.crew-image {
+    width: 65%;
+    max-height: 100%;
+}
+/* ========================== Technology ========================== */
+.technology-wrap {
+    display: flex;
+}
+
+.technology-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-right: 80px;
+}
+.technology-item-icon {
+    width: 76px;
+    aspect-ratio: 1;
+    line-height: 76px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    font-family: Bellefair;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: 1px solid #ffffff80;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.technology-item-icon:hover {
+    border-color: #fff;
+}
+
+.technology-item-icon.active {
+    background-color: #fff;
+    color: #0b0d17;
+}
+
+.technology-detail {
+    flex: 1;
+}
+
+.technology-detail h4 {
+    color: #d0d6f9;
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-bottom: 12px;
+}
+
+.technology-name {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 52px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.technology-description {
+    color: #d0d6f9;
+    font-family: Barlow;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.technology-bg + .content .content__rightside {
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-start;
+}
+
+.technology-bg + .content .content__rightside picture {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.technology-image {
+    width: 90%;
+}
+
+/* ========================== Responsive ========================== */
+/* Tablet */
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Background */
+    .home-bg {
+        background: url("./assets/home/background-home-tablet.jpg") no-repeat
+            center;
+        background-size: cover;
+    }
+
+    .destination-bg {
+        background: url("./assets/destination/background-destination-tablet.jpg")
+            no-repeat center;
+        background-size: cover;
+    }
+
+    .crew-bg {
+        background: url("./assets/crew/background-crew-tablet.jpg") no-repeat
+            center;
+        background-size: cover;
+    }
+
+    .technology-bg {
+        background: url("./assets/technology/background-technology-tablet.jpg")
+            no-repeat center;
+        background-size: cover;
+    }
+
+    /* Header */
+    .header {
+        top: 0;
+    }
+
+    /* Navbar */
+    .navbar__list {
+        width: 450px;
+        padding-left: 45px;
+        gap: 35px;
+    }
+    .navbar__list::before {
+        display: none;
+    }
+    .navbar__item > span {
+        display: none;
+    }
+
+    .home-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .home-content__leftside {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .home-content__leftside h3 {
+        font-size: 16px;
+    }
+
+    .home-content__leftside p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .home-content__rightside {
+        margin-top: 120px;
+        padding-bottom: 100px;
+    }
+
+    .home-content__rightside a::before {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* Destination */
+    .destination-bg + .content {
+        display: block;
+        margin-right: auto;
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+
+    .content__rightside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .planet-detail {
+        width: 90%;
+    }
+    .planet-detail h1 {
+        text-align: center;
+    }
+
+    .planet-detail p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .planet-distance,
+    .planet-travel {
+        text-align: center;
+    }
+
+    /* Crew */
+    .crew-bg + .content {
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .crew-role,
+    .crew-name,
+    .crew-bio {
+        text-align: center;
+    }
+
+    .crew-role {
+        font-size: 24px;
+    }
+    .crew-name {
+        font-size: 36px;
+    }
+    .crew-bio {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .crew-list {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .crew-item-icon {
+        width: 16px;
+        height: 16px;
+    }
+    /* Technology */
+    .technology-bg + .content {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: 0 auto;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .technology-bg + .content .content__leftside {
+        padding-top: 350px;
+        padding-bottom: 100px;
+    }
+
+    .technology-wrap {
+        flex-direction: column;
+    }
+
+    .technology-list {
+        margin-right: 0;
+        margin-bottom: 40px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .technology-item-icon {
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .technology-detail h4,
+    .technology-name {
+        margin-bottom: 16px;
+    }
+
+    .technology-detail h4,
+    .technology-name,
+    .technology-description {
+        text-align: center;
+    }
+
+    .technology-description {
+        font-size: 16px;
+    }
+
+    .technology-bg + .content .content__leftside .page-heading {
+        position: absolute;
+        top: 120px;
+        left: 30px;
+    }
+
+    .technology-bg + .content .content__rightside {
+        width: 100%;
+        padding-top: 30px;
+        max-height: 320px;
+        display: block;
+        text-align: center;
+    }
+
+    .technology-bg + .content .content__rightside picture {
+        position: absolute;
+        top: 120;
+        left: 0;
+        right: 0;
+    }
+
+    .technology-image {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    /* Background */
+    .home-bg {
+        background: url("./assets/home/background-home-mobile.jpg") no-repeat
+            center;
+        background-size: cover;
+    }
+    .destination-bg {
+        background: url("./assets/destination/background-destination-mobile.jpg")
+            no-repeat center;
+        background-size: cover;
+    }
+    .crew-bg {
+        background: url("./assets/crew/background-crew-mobile.jpg") no-repeat
+            center;
+        background-size: cover;
+    }
+    .technology-bg {
+        background: url("./assets/technology/background-technology-mobile.jpg")
+            no-repeat center;
+        background-size: cover;
+    }
+
+    /* Header */
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    .navbar {
+        display: none;
+    }
+    .menu-icon {
+        position: absolute;
+        top: 12px;
+        right: 30px;
+        z-index: 2;
+        width: 26px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+    }
+    .menu-icon span {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: cubic-bezier(0.77,0.2,0.05,1.0) .3s;
+    }
+
+    .menu-icon span:last-child {
+        transform: rotate(360deg);
+    }
+
+    .menu-icon.active span:first-child {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-icon.active span:last-child {
+        transform: translateY(-9px) rotate(315deg);
+    }
+
+    #mobile-menu:checked + .navbar-mobile {
+        opacity: 1;
+        transform: translateY(0);
+        display: block;
+    }
+
+    .navbar__list--mobile {
+        padding-left: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 120px;
+        margin-left: 32px;
+    }
+    .navbar__item--mobile {
+        display: flex;
+        align-items: center;
+    }
+    .navbar__item--mobile span {
+        color: #fff;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 2.7px;
+        margin-right: 12px;
+    }
+
+    .navbar__item--mobile a {
+        color: #fff;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+        padding: 12px 0;
+        flex: 1
+    }
+
+    .navbar__item--mobile.active {
+        border-right: 4px solid var(--text-color-3);
+    }
+
+    .home-content {
+        display: block;
+        width: 90%;
+        padding-top: 120px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .home-content__leftside {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .home-content__leftside h3,
+    .home-content__leftside h1,
+    .home-content__leftside p {
+        text-align: center;
+    }
+    .home-content__leftside h3 {
+        font-size: 16px;
+    }
+
+    .home-content__leftside h1 {
+        font-size: 80px;
+    }
+
+    .home-content__rightside {
+        padding-bottom: 150px;
+    }
+
+    .home-content__rightside a {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        font-size: 20px;
+    }
+
+    .home-content__rightside a::before {
+        width: 250px;
+        height: 250px;
+    }
+}
