@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/shared/logo.svg";
 
 const Header = () => {
     const location = useLocation()
     const [url, setUrl] = useState('/')
+    const inputRef = useRef();
+    const menuBtn = useRef()
 
     useEffect(() => {
         setUrl(location.pathname)
+        menuBtn.current.classList.remove('active')
+        inputRef.current.checked = false;
     }, [location])
 
     return (
@@ -19,16 +23,14 @@ const Header = () => {
                 htmlFor="mobile-menu" 
                 className="menu-icon" 
                 onClick={(e) => e.currentTarget.classList.toggle('active')}
+                ref={menuBtn}
             >
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
-            <input type='checkbox' id="mobile-menu" style={{ display: "none" }}/>
+            <input type='checkbox' id="mobile-menu" style={{ display: "none" }} ref={inputRef}/>
             <nav className="navbar-mobile">
-                {/* <label className="close-btn" htmlFor="mobile-menu">
-                    <img src={closeIcon} alt="close button" />
-                </label> */}
                 <ul className="navbar__list--mobile">
                     <li className={`navbar__item--mobile ${url === '/' ? 'active' : ''}`}>
                         <span>00</span>

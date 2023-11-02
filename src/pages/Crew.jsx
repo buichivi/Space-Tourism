@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "../data.json";
+import data from "../data";
 
 const Crew = () => {
     const { crew } = data;
@@ -15,9 +15,11 @@ const Crew = () => {
                         Meet your crew
                     </h4>
                     <div className="crew-detail">
-                        <h4 className="crew-role">{crew[curCrewIndex].role}</h4>
-                        <h1 className="crew-name">{crew[curCrewIndex].name}</h1>
-                        <p className="crew-bio">{crew[curCrewIndex].bio}</p>
+                        <div>
+                            <h4 className="crew-role">{crew[curCrewIndex].role}</h4>
+                            <h1 className="crew-name">{crew[curCrewIndex].name}</h1>
+                            <p className="crew-bio">{crew[curCrewIndex].bio}</p>
+                        </div>
                         <ul className="crew-list">
                             {crew.map((crewItem, index) => {
                                 return (

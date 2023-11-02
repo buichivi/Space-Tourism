@@ -1,5 +1,6 @@
-import data from "../data.json";
+import data from "../data";
 import { useState } from "react";
+import moonImg from '../assets/destination/image-moon.png'
 
 const Destination = () => {
     const { destinations } = data;

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import data from '../data.json'
+import { useState } from 'react'
+import data from '../data'
 
 const Technology = () => {
   const { technology  } = data
